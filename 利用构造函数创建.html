@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function star(age, name, sex) {
+            this.a=age
+            this.n=name
+            this.s=sex;
+            this.song=function(sing){
+                console.log(sing);   
+            }
+        }
+        var ldh=new star(60,'刘德华','男')
+        ldh.song('冰雨')
+        console.log(ldh);
+        
+        
+        </script>
+</body>
+</html>

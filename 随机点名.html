@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 1px solid #000
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div><button>随机点名</button>
+    <script>
+
+        // document.write(getRandom(1, 10));
+        var arr = ["徐天真",
+            "孙慧红",
+            "钟海洪",
+            "谢含宇",
+            "王振",
+            "肖红日",
+            "敖小丽",
+            "夏斌",
+            "周礼杰",
+            "范廉律",
+            "容誉",
+            "胡阳",
+            "王润贤",
+            "丰洒",
+            "廖世俊",
+            "易志朋",
+            "李玉琴",
+            "单越菲",
+            "陈志凯",
+            "胡一航 ",
+            "郭长鹏",
+            "李江",
+            "黄召",
+            "柳聪",
+            "宗毛毛",
+            "项齐爽",
+            "谢俊灿",
+            "马瑞",
+            "彭群",
+            "梅爽",
+            "陈新",
+            "唐海涛",
+            "王伟帆",
+            "杨文卉",
+            "武梦涵",
+            "万奕斌",
+            "王杰",
+            "周袁",
+            "肖雨豪",
+            "王韦",
+            "杨聪",
+            "赵慧",
+            "辛孟",
+            "施昌麒",
+            "李玲",
+            "张骜",
+            "胡印",
+            "雷彪彪",
+            " 高威",
+            "韩巧",
+            "廖喜平",
+            "罗康华",
+            "张康",
+            "李晨皓",
+            "魏志勇",
+            "徐洋",
+            "杨超",
+            "舒忠仪",
+            "李玄",
+            "刘宇航",
+            "王宇",
+            "何彦沁",
+            "吴迪",
+            "邓炎",
+            "徐浩翔",
+            "罗文兵",
+            "熊翔翔",
+            "赵闪",
+            "吴学兵",
+            "涂芳",
+            "董志威",
+            "易方",
+            "张青"];
+        var div = document.querySelector('.box')
+        var btn = document.querySelector('button')
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        btn.onclick = function () {
+            div.innerText = arr[getRandom(0, arr.length - 1)];
+            // div.className="box"
+        }
+
+
+    </script>
+</body>
+
+</html>

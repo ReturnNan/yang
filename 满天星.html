@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gold;
+            position: relative;
+        }
+
+        img:hover {
+           transition: 2s all;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        //点出漫天小星星
+        //背景色
+        //给html添加onclick事件
+        //创建图片节点，并追加到body父节点下
+        //图片的随机大小
+        var html = document.querySelector('html');
+        html.onclick = function (e) {
+            //创建图片节点（在内存中，还看不见）
+            var imgObj = document.createElement("img");
+            //追加节点
+            document.body.appendChild(imgObj);
+            //添加属性
+            imgObj.src = "xingxing.gif";
+            //添加width属性
+            imgObj.width = getRandom(15, 100);
+            //定位
+            var x = e.clientX ? e.clientX : event.clientX;
+            var y = e.clientY ? e.clientY : event.clientY;
+            imgObj.style.position = "absolute";
+            imgObj.style.left = x - imgObj.width / 2 + "px";
+            imgObj.style.top = y - imgObj.width / 2 + "px";
+            imgObj.style.transform = 'rotate(360deg)'
+        }
+
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+    </script>
+
+</body>
+
+</html>
